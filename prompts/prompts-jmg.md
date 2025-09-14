@@ -12,5 +12,5 @@
 ## Prompt para Configuración de Secrets
 "Lista los secrets necesarios en GitHub para el pipeline: EC2_INSTANCE (IP de EC2), AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY para credenciales AWS, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT para PostgreSQL."
 
-## Prompt para Arreglar Tests del Backend
-"Los tests del backend fallan por errores de TypeScript: parámetros con tipo 'any' implícito en positionService.ts, y PrismaClientInitializationError que no existe en la versión actual. Arregla añadiendo tipos explícitos (any) a los parámetros de map, cambia PrismaClientInitializationError por error.code === 'P1001' para errores de conexión. Genera el cliente de Prisma con npx prisma generate para que los tests puedan importar @prisma/client."
+## Prompt para Generar Tests del Backend
+"Como desarrollador, crea tests unitarios para el backend Node.js/TypeScript usando Jest. Para cada servicio (candidateService, positionService) y controlador (candidateController, positionController), crea archivos .test.ts que mockeen Prisma Client. Incluye tests para funciones principales como updateCandidateStage, getCandidatesByPositionService, y controladores de API. Usa jest.mock para simular @prisma/client y verifica que las funciones retornen los datos esperados."
